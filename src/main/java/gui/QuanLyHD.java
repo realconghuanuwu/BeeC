@@ -713,6 +713,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
         jPanel22.setBackground(new java.awt.Color(255, 255, 255));
         jPanel22.setToolTipText("");
 
+        tblChiTietHoaDon.setBackground(new java.awt.Color(255, 255, 255));
+        tblChiTietHoaDon.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblChiTietHoaDon.setForeground(new java.awt.Color(0, 0, 0));
         tblChiTietHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -729,6 +732,13 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblChiTietHoaDon.setFocusable(false);
+        tblChiTietHoaDon.setGridColor(new java.awt.Color(246, 246, 246));
+        tblChiTietHoaDon.setRowHeight(25);
+        tblChiTietHoaDon.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblChiTietHoaDon.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblChiTietHoaDon.setShowGrid(false);
+        tblChiTietHoaDon.setShowHorizontalLines(true);
         jScrollPane6.setViewportView(tblChiTietHoaDon);
 
         btnXoaHoaDon.setBackground(new java.awt.Color(19, 144, 234));
@@ -790,6 +800,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 .addGap(0, 6, Short.MAX_VALUE))
         );
 
+        tblHoaDon.setBackground(new java.awt.Color(255, 255, 255));
+        tblHoaDon.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblHoaDon.setForeground(new java.awt.Color(0, 0, 0));
         tblHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -806,6 +819,13 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblHoaDon.setFocusable(false);
+        tblHoaDon.setGridColor(new java.awt.Color(246, 246, 246));
+        tblHoaDon.setRowHeight(25);
+        tblHoaDon.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblHoaDon.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblHoaDon.setShowGrid(false);
+        tblHoaDon.setShowHorizontalLines(true);
         tblHoaDon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblHoaDonMouseClicked(evt);
@@ -863,7 +883,6 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
 
         txtMaHD.setBackground(new java.awt.Color(255, 255, 255));
         txtMaHD.setForeground(new java.awt.Color(0, 0, 0));
-        txtMaHD.setText("jTextField1");
         txtMaHD.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Mã Hóa Đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
 
         txtMaKH.setBackground(new java.awt.Color(255, 255, 255));
@@ -1059,6 +1078,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
             .addComponent(txtMaKhachHangHoaDon, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
+        tblChiTietHoaDonThanhToan.setBackground(new java.awt.Color(255, 255, 255));
+        tblChiTietHoaDonThanhToan.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblChiTietHoaDonThanhToan.setForeground(new java.awt.Color(0, 0, 0));
         tblChiTietHoaDonThanhToan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1075,6 +1097,13 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblChiTietHoaDonThanhToan.setFocusable(false);
+        tblChiTietHoaDonThanhToan.setGridColor(new java.awt.Color(246, 246, 246));
+        tblChiTietHoaDonThanhToan.setRowHeight(25);
+        tblChiTietHoaDonThanhToan.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblChiTietHoaDonThanhToan.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblChiTietHoaDonThanhToan.setShowGrid(false);
+        tblChiTietHoaDonThanhToan.setShowHorizontalLines(true);
         tblChiTietHoaDonThanhToan.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblChiTietHoaDonThanhToan);
         if (tblChiTietHoaDonThanhToan.getColumnModel().getColumnCount() > 0) {
@@ -1096,6 +1125,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
             }
         });
 
+        tblSanPham.setBackground(new java.awt.Color(255, 255, 255));
+        tblSanPham.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblSanPham.setForeground(new java.awt.Color(0, 0, 0));
         tblSanPham.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1112,6 +1144,14 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblSanPham.setFocusable(false);
+        tblSanPham.setGridColor(new java.awt.Color(246, 246, 246));
+        tblSanPham.setRowHeight(25);
+        tblSanPham.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblSanPham.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblSanPham.setShowGrid(false);
+        tblSanPham.setShowHorizontalLines(true);
+        tblSanPham.setShowVerticalLines(false);
         tblSanPham.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblSanPhamMouseClicked(evt);
@@ -1549,6 +1589,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
             .addComponent(txtDiaChiKhachHang, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
+        tblKhachHang.setBackground(new java.awt.Color(255, 255, 255));
+        tblKhachHang.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblKhachHang.setForeground(new java.awt.Color(0, 0, 0));
         tblKhachHang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1565,6 +1608,14 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblKhachHang.setFocusable(false);
+        tblKhachHang.setGridColor(new java.awt.Color(246, 246, 246));
+        tblKhachHang.setRowHeight(25);
+        tblKhachHang.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblKhachHang.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblKhachHang.setShowGrid(false);
+        tblKhachHang.setShowHorizontalLines(true);
+        tblKhachHang.setShowVerticalLines(false);
         tblKhachHang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblKhachHangMouseClicked(evt);

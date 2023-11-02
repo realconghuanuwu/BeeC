@@ -1190,6 +1190,9 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
+        tblThongKeNhanVien.setBackground(new java.awt.Color(255, 255, 255));
+        tblThongKeNhanVien.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblThongKeNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         tblThongKeNhanVien.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1206,6 +1209,13 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblThongKeNhanVien.setFocusable(false);
+        tblThongKeNhanVien.setGridColor(new java.awt.Color(246, 246, 246));
+        tblThongKeNhanVien.setRowHeight(25);
+        tblThongKeNhanVien.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblThongKeNhanVien.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblThongKeNhanVien.setShowGrid(true);
+        tblThongKeNhanVien.setShowVerticalLines(false);
         jScrollPane1.setViewportView(tblThongKeNhanVien);
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
@@ -1249,6 +1259,9 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
+        tblNhanVien.setBackground(new java.awt.Color(255, 255, 255));
+        tblNhanVien.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         tblNhanVien.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1265,6 +1278,13 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblNhanVien.setFocusable(false);
+        tblNhanVien.setGridColor(new java.awt.Color(246, 246, 246));
+        tblNhanVien.setRowHeight(25);
+        tblNhanVien.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblNhanVien.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblNhanVien.setShowGrid(true);
+        tblNhanVien.setShowVerticalLines(false);
         tblNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblNhanVienMouseClicked(evt);
@@ -1605,10 +1625,9 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(btnTimKiem, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                     .addComponent(txtTimKiem, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnNext, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPrev, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFirst, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnNext, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPrev, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnFirst, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnLast, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)

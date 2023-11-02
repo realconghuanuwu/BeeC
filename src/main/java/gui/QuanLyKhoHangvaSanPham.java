@@ -65,9 +65,12 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
         updateStatusPhieuNhap();
         updateStatusSanPham();
         
-        fillNCCToComBoBox();
-        fillThuongHieuToComBoBox();
-        fillDanhMucToComBoBox();
+        if(nccDAO.selectAll() != null) 
+            fillNCCToComBoBox();
+        if(thuonghieuDAO.selectAll() != null)  
+            fillThuongHieuToComBoBox();
+        if(danhmucDAO.selectAll() != null)
+            fillDanhMucToComBoBox();
     }
     
     
@@ -1262,6 +1265,9 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
             .addComponent(txtNgayTaoPhieuNhap, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
+        tblChiTietPhieuNhap.setBackground(new java.awt.Color(255, 255, 255));
+        tblChiTietPhieuNhap.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblChiTietPhieuNhap.setForeground(new java.awt.Color(0, 0, 0));
         tblChiTietPhieuNhap.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1270,6 +1276,13 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
                 "Tên Sản Phẩm", "Đơn Vị Tính", "Số Lượng", "Đơn Giá", "Thành Tiền"
             }
         ));
+        tblChiTietPhieuNhap.setFocusable(false);
+        tblChiTietPhieuNhap.setGridColor(new java.awt.Color(246, 246, 246));
+        tblChiTietPhieuNhap.setRowHeight(25);
+        tblChiTietPhieuNhap.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblChiTietPhieuNhap.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblChiTietPhieuNhap.setShowGrid(false);
+        tblChiTietPhieuNhap.setShowHorizontalLines(true);
         tblChiTietPhieuNhap.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblChiTietPhieuNhapMouseClicked(evt);
@@ -1319,6 +1332,9 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
             }
         });
 
+        tblPhieuNhap.setBackground(new java.awt.Color(255, 255, 255));
+        tblPhieuNhap.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblPhieuNhap.setForeground(new java.awt.Color(0, 0, 0));
         tblPhieuNhap.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1335,6 +1351,14 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblPhieuNhap.setFocusable(false);
+        tblPhieuNhap.setGridColor(new java.awt.Color(246, 246, 246));
+        tblPhieuNhap.setRowHeight(25);
+        tblPhieuNhap.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblPhieuNhap.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblPhieuNhap.setShowGrid(false);
+        tblPhieuNhap.setShowHorizontalLines(true);
+        tblPhieuNhap.setShowVerticalLines(false);
         tblPhieuNhap.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblPhieuNhapMouseClicked(evt);
@@ -1781,6 +1805,9 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
             .addComponent(txtThoiGianBaoHanh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
+        tblSanPham.setBackground(new java.awt.Color(255, 255, 255));
+        tblSanPham.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblSanPham.setForeground(new java.awt.Color(0, 0, 0));
         tblSanPham.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -1800,6 +1827,13 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblSanPham.setFocusable(false);
+        tblSanPham.setGridColor(new java.awt.Color(246, 246, 246));
+        tblSanPham.setRowHeight(25);
+        tblSanPham.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblSanPham.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblSanPham.setShowGrid(false);
+        tblSanPham.setShowHorizontalLines(true);
         tblSanPham.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblSanPhamMouseClicked(evt);
@@ -2205,6 +2239,9 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
             }
         });
 
+        tblNCC.setBackground(new java.awt.Color(255, 255, 255));
+        tblNCC.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblNCC.setForeground(new java.awt.Color(0, 0, 0));
         tblNCC.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -2221,6 +2258,13 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblNCC.setFocusable(false);
+        tblNCC.setGridColor(new java.awt.Color(246, 246, 246));
+        tblNCC.setRowHeight(25);
+        tblNCC.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblNCC.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblNCC.setShowGrid(false);
+        tblNCC.setShowHorizontalLines(true);
         tblNCC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblNCCMouseClicked(evt);
@@ -2501,6 +2545,9 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
             .addComponent(jScrollPane5)
         );
 
+        tblThuongHieu.setBackground(new java.awt.Color(255, 255, 255));
+        tblThuongHieu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblThuongHieu.setForeground(new java.awt.Color(0, 0, 0));
         tblThuongHieu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -2517,6 +2564,13 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblThuongHieu.setFocusable(false);
+        tblThuongHieu.setGridColor(new java.awt.Color(246, 246, 246));
+        tblThuongHieu.setRowHeight(25);
+        tblThuongHieu.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblThuongHieu.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblThuongHieu.setShowGrid(true);
+        tblThuongHieu.setShowVerticalLines(false);
         tblThuongHieu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblThuongHieuMouseClicked(evt);
@@ -2828,6 +2882,9 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
             .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
         );
 
+        tblDanhMuc.setBackground(new java.awt.Color(255, 255, 255));
+        tblDanhMuc.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tblDanhMuc.setForeground(new java.awt.Color(0, 0, 0));
         tblDanhMuc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -2844,6 +2901,13 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblDanhMuc.setFocusable(false);
+        tblDanhMuc.setGridColor(new java.awt.Color(246, 246, 246));
+        tblDanhMuc.setRowHeight(25);
+        tblDanhMuc.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        tblDanhMuc.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        tblDanhMuc.setShowGrid(false);
+        tblDanhMuc.setShowHorizontalLines(true);
         tblDanhMuc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblDanhMucMouseClicked(evt);
@@ -3541,6 +3605,9 @@ public class QuanLyKhoHangvaSanPham extends javax.swing.JInternalFrame {
 
     private void btnTruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTruActionPerformed
         int solg = Integer.parseInt(txtSoLuongSanPham.getText());
+        if(solg == 0) {
+            return;
+        }
         solg--;
         txtSoLuongSanPham.setText(""+solg);
     }//GEN-LAST:event_btnTruActionPerformed

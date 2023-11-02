@@ -101,6 +101,7 @@ gui\QuanLyKhoHangvaSanPham$34.class
 gui\QuanLyKhoHangvaSanPham$6.class
 gui\ResetPasswordJDialog$5.class
 utils\EverythingAboutPrint.class
+gui\test$1.class
 gui\QuanLyHD$10.class
 gui\QuanLyKhoHangvaSanPham$57.class
 gui\ForgotPasswordJDialog$6.class
@@ -134,6 +135,7 @@ gui\QuanLyHD$13.class
 gui\QuanLyKhoHangvaSanPham$20.class
 gui\QuanLyKhoHangvaSanPham$53.class
 gui\ForgotPasswordJDialog$3.class
+gui\test.class
 gui\QuanLyKhoHangvaSanPham$13.class
 gui\NhanVienvaThongKe$8.class
 gui\LoginJDialog$6.class
