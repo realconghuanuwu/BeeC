@@ -47,7 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private void hover(JPanel panel) {
-        JPanel[] pn = {btnHoaDon,btnKhachHang,btnKhoHang,btnNhanVien,btnSanPham,btnThanhToan,btnThongKe,btnDangXuat,btnHuongDan, btnChat};
+        JPanel[] pn = {btnHoaDon,btnKhachHang,btnKhoHang,btnNhanVien,btnSanPham,btnThanhToan,btnThongKe,btnDangXuat,btnHuongDan, btnChat, btnSettings};
         for (JPanel jPanel : pn) {
             jPanel.setBackground(new Color(19,144,234));
         }
@@ -84,6 +84,8 @@ public class MainFrame extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         btnChat = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
+        btnSettings = new javax.swing.JPanel();
+        d = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         lblTenNhanVien = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -195,7 +197,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(btnKhachHangLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jLabel5)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         btnKhachHangLayout.setVerticalGroup(
             btnKhachHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,7 +340,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(250, 250, 250));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logout.png"))); // NOI18N
-        jLabel11.setText("Đăng Xuất");
+        jLabel11.setText(" Đăng Xuất");
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel11.setInheritsPopupMenu(false);
 
@@ -347,8 +349,8 @@ public class MainFrame extends javax.swing.JFrame {
         btnDangXuatLayout.setHorizontalGroup(
             btnDangXuatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnDangXuatLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel11)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         btnDangXuatLayout.setVerticalGroup(
@@ -400,7 +402,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Chat Room.png"))); // NOI18N
-        jLabel13.setText("Messenger");
+        jLabel13.setText(" Messenger");
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel13.setInheritsPopupMenu(false);
 
@@ -416,6 +418,37 @@ public class MainFrame extends javax.swing.JFrame {
         btnChatLayout.setVerticalGroup(
             btnChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel13)
+        );
+
+        btnSettings.setBackground(new java.awt.Color(19, 144, 234));
+        btnSettings.setForeground(new java.awt.Color(204, 204, 204));
+        btnSettings.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSettingsMouseClicked(evt);
+            }
+        });
+
+        d.setBackground(new java.awt.Color(204, 204, 204));
+        d.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        d.setForeground(new java.awt.Color(255, 255, 255));
+        d.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Settings.png"))); // NOI18N
+        d.setText(" Settings");
+        d.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        d.setInheritsPopupMenu(false);
+
+        javax.swing.GroupLayout btnSettingsLayout = new javax.swing.GroupLayout(btnSettings);
+        btnSettings.setLayout(btnSettingsLayout);
+        btnSettingsLayout.setHorizontalGroup(
+            btnSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnSettingsLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(d)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnSettingsLayout.setVerticalGroup(
+            btnSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(d)
         );
 
         javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
@@ -440,6 +473,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
             .addComponent(btnChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menuLayout.setVerticalGroup(
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,6 +503,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnChat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSettings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnHuongDan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnDangXuat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -588,9 +624,9 @@ public class MainFrame extends javax.swing.JFrame {
             if(Auth.isManager()|| Auth.isSaler())
                 openHoaDon();
             else
-                MsgBox.alert(this, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
         } else {
-            MsgBox.alert(this, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
         }
             
         
@@ -609,9 +645,9 @@ public class MainFrame extends javax.swing.JFrame {
             if(Auth.isManager()|| Auth.isSaler())
                 openThanhToan(); 
             else
-                MsgBox.alert(this, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
         } else {
-            MsgBox.alert(this, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
         }
         
     }//GEN-LAST:event_btnThanhToanMouseClicked
@@ -629,9 +665,9 @@ public class MainFrame extends javax.swing.JFrame {
             if(Auth.isManager()|| Auth.isSaler())
                 openKhachHang();
             else
-                MsgBox.alert(this, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
         } else {
-            MsgBox.alert(this, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
         }
         
     }//GEN-LAST:event_btnKhachHangMouseClicked
@@ -649,9 +685,9 @@ public class MainFrame extends javax.swing.JFrame {
             if(Auth.isManager()|| Auth.isNVNhap())
                 openKhoHang();
             else
-                MsgBox.alert(this, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
         } else {
-            MsgBox.alert(this, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
         }
         
     }//GEN-LAST:event_btnKhoHangMouseClicked
@@ -669,9 +705,9 @@ public class MainFrame extends javax.swing.JFrame {
             if(Auth.isManager()|| Auth.isNVNhap())
                 openSanPham();
             else
-                MsgBox.alert(this, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
         } else {
-            MsgBox.alert(this, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
         }
         
     }//GEN-LAST:event_btnSanPhamMouseClicked
@@ -689,9 +725,9 @@ public class MainFrame extends javax.swing.JFrame {
             if(Auth.isManager())
                 openNhanVien();
             else
-                MsgBox.alert(this, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
         } else {
-            MsgBox.alert(this, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
         }
         
     }//GEN-LAST:event_btnNhanVienMouseClicked
@@ -709,9 +745,9 @@ public class MainFrame extends javax.swing.JFrame {
             if(Auth.isManager())
                 openThongKe();
             else
-                MsgBox.alert(this, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Bạn không có quyền sử dụng chức năng này!</font></html>");
         } else {
-            MsgBox.alert(this, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Phải đăng nhập mới thực hiện được chức năng này!</font></html>");
         }
         
     }//GEN-LAST:event_btnThongKeMouseClicked
@@ -752,6 +788,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void btnChatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnChatMouseClicked
         hover(btnChat);
     }//GEN-LAST:event_btnChatMouseClicked
+
+    private void btnSettingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSettingsMouseClicked
+        hover(btnSettings);
+    }//GEN-LAST:event_btnSettingsMouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -795,8 +835,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel btnKhoHang;
     private javax.swing.JPanel btnNhanVien;
     private javax.swing.JPanel btnSanPham;
+    private javax.swing.JPanel btnSettings;
     private javax.swing.JPanel btnThanhToan;
     private javax.swing.JPanel btnThongKe;
+    private javax.swing.JLabel d;
     private javax.swing.JDesktopPane jDesktopPane;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -81,9 +81,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
         try {
             khDAO.insert(kh);
             fillDataToTableKhachHang();
-            MsgBox.alert(this, "Thêm mới khách hàng thành công!");
+            MsgBox.alert(null, "Thêm mới khách hàng thành công!");
         } catch (Exception e) {
-            MsgBox.alert(this, "<html><font color='red'>Thêm mới khách hàng thất bại!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Thêm mới khách hàng thất bại!</font></html>");
             e.printStackTrace();
         }
         
@@ -94,9 +94,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
         try {
             khDAO.update(kh);
             fillDataToTableKhachHang();
-            MsgBox.alert(this, "Cập nhật khách hàng thành công!");
+            MsgBox.alert(null, "Cập nhật khách hàng thành công!");
         } catch (Exception e) {
-            MsgBox.alert(this, "<html><font color='red'>Cập nhật khách hàng thất bại!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Cập nhật khách hàng thất bại!</font></html>");
             e.printStackTrace();
         }
         
@@ -108,9 +108,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
             khDAO.delete(ma);
             fillDataToTableKhachHang();
             clearFormKhachHang();
-            MsgBox.alert(this, "Xóa khách hàng thành công!");
+            MsgBox.alert(null, "Xóa khách hàng thành công!");
         } catch (Exception e) {
-            MsgBox.alert(this, "<html><font color='red'>Xóa thất bại!<br>Cần xóa các dữ liệu liên quan đến khách hàng này trước!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Xóa thất bại!<br>Cần xóa các dữ liệu liên quan đến khách hàng này trước!</font></html>");
             e.printStackTrace();
         }
     }
@@ -209,7 +209,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
             } 
             
         } catch (Exception e) {
-            MsgBox.alert(this, "Lỗi truy vấn dữ liệu");
+            MsgBox.alert(null, "Lỗi truy vấn dữ liệu");
             e.printStackTrace();
         }
     }
@@ -319,7 +319,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 model.addRow(row);
             } 
         } catch (Exception e) {
-            MsgBox.alert(this, "Lỗi truy vấn dữ liệu");
+            MsgBox.alert(null, "Lỗi truy vấn dữ liệu");
             e.printStackTrace();
         }
     }
@@ -401,11 +401,11 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
         try {
             hdDAO.insert(hd);
             fillDataToTableHoaDon();
-            MsgBox.alert(this, "Thêm mới hóa đơn thành công!");
+            MsgBox.alert(null, "Thêm mới hóa đơn thành công!");
             setFormHoaDon(hd);
 //            updateStatusThanhToan(true);
         } catch (Exception e) {
-            MsgBox.alert(this, "Thêm mới hóa đơn thất bại!");
+            MsgBox.alert(null, "Thêm mới hóa đơn thất bại!");
 //            updateStatusThanhToan(false);
             e.printStackTrace();
         }  
@@ -423,7 +423,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
             setFormHoaDon(hd);
 //            updateStatusThanhToan(true);
         } catch (Exception e) {
-            MsgBox.alert(this, "Cập nhật hóa đơn thất bại!");
+            MsgBox.alert(null, "Cập nhật hóa đơn thất bại!");
 //            updateStatusThanhToan(false);
             e.printStackTrace();
         }  
@@ -441,7 +441,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 model.addRow(row);
             } 
         } catch (Exception e) {
-            MsgBox.alert(this, "Lỗi truy vấn dữ liệu");
+            MsgBox.alert(null, "Lỗi truy vấn dữ liệu");
             e.printStackTrace();
         }
     }
@@ -484,7 +484,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 }
             }
         } catch (Exception e) {
-            MsgBox.alert(this, "Thêm hàng hóa thất bại!");
+            MsgBox.alert(null, "Thêm hàng hóa thất bại!");
             e.printStackTrace();
         }       
     }
@@ -504,7 +504,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
                 spDAO.update(sp);
             }
         } catch (Exception e) {
-            MsgBox.alert(this, "cật nhập số lượng sản phẩm thất bại!");
+            MsgBox.alert(null, "cật nhập số lượng sản phẩm thất bại!");
             e.printStackTrace();
         }       
     }
@@ -517,9 +517,9 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
             hdDAO.delete(ma);
             fillDataToTableHoaDon();
             clearFormHoaDon();
-            MsgBox.alert(this, "Xóa hóa đơn thành công!");
+            MsgBox.alert(null, "Xóa hóa đơn thành công!");
         } catch (Exception e) {
-            MsgBox.alert(this, "Xóa hóa đơn thất bại!");
+            MsgBox.alert(null, "Xóa hóa đơn thất bại!");
             e.printStackTrace();
         }
     }
@@ -1802,21 +1802,21 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
 
     private void btnThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThanhToanActionPerformed
         if(tblChiTietHoaDon.getRowCount() > 0) {
-            MsgBox.alert(this, "<html><font color='red'>Hóa đơn này đã thanh toán<br>Vui lòng tạo hóa đơn mới!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Hóa đơn này đã thanh toán<br>Vui lòng tạo hóa đơn mới!</font></html>");
             return;
         }
         
-        if(MsgBox.confirm(this, "Xác nhận thanh toán?\nKiểm tra chi tiết hóa đơn trước khi thanh toán.")) {
+        if(MsgBox.confirm(null, "Xác nhận thanh toán?\nKiểm tra chi tiết hóa đơn trước khi thanh toán.")) {
             isToogleThanhToan = true;
             //update hóa đơn
             try {
                 updateHoaDon();
                 insertupdateChiTietHoaDon();
                 updateTableSanPham();
-                MsgBox.alert(this, "Thanh Toán Thành Công!");
+                MsgBox.alert(null, "Thanh Toán Thành Công!");
             } catch (Exception e) {
                 e.printStackTrace();
-                MsgBox.alert(this, "<html><font color='red'>Thanh Toán Thất bại!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Thanh Toán Thất bại!</font></html>");
             }
         }
     }//GEN-LAST:event_btnThanhToanActionPerformed
@@ -1841,7 +1841,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
         int soluongtrongbang = Integer.parseInt(tblSanPham.getValueAt(tblSanPham.getSelectedRow(), 3).toString());
         
         if(soluong <= 0 || soluongtrongbang <= 0 || soluong > soluongtrongbang) {
-            MsgBox.alert(this, "<html><font color='red'>Số lượng không hợp lệ!</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>Số lượng không hợp lệ!</font></html>");
             return;
         }
         editSanPhamToChiTietHoaDon();
@@ -1879,7 +1879,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
         }   
                       
         if(strb.length() > 0) {
-            MsgBox.alert(this, "<html><font color='red'>"+strb+"</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>"+strb+"</font></html>");
             return false;
         }
         return true;
@@ -1888,7 +1888,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
     private void btnThemKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemKhachHangActionPerformed
         if(isValidKhachHangForm()) {
             if (khDAO.selectByID(txtMaKhachHang.getText()) != null) {
-                MsgBox.alert(this, "<html><font color='red'>Mã khách hàng đã tồn tại!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Mã khách hàng đã tồn tại!</font></html>");
                 return;
             }
             insertKhachHang();
@@ -1900,7 +1900,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnSuaKhachHangActionPerformed
 
     private void btnXoaKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaKhachHangActionPerformed
-        if (MsgBox.confirm(this, "Xóa khách hàng này?")) {
+        if (MsgBox.confirm(null, "Xóa khách hàng này?")) {
             deleteKhachHang();
             init();
         }
@@ -1990,7 +1990,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
 
     private void btnXoaHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaHoaDonActionPerformed
         if(isValidHoaDonForm()) {
-            if (MsgBox.confirm(this, "Xóa hóa đơn này?\nĐiều này sẽ dẫn đến xóa các sản phẩm liên quan!")) {
+            if (MsgBox.confirm(null, "Xóa hóa đơn này?\nĐiều này sẽ dẫn đến xóa các sản phẩm liên quan!")) {
                 deleteHoaDon();
                 init();
             }
@@ -2006,7 +2006,7 @@ public class QuanLyHD extends javax.swing.JInternalFrame {
         }  
            
         if(strb.length() > 0) {
-            MsgBox.alert(this, "<html><font color='red'>"+strb+"</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>"+strb+"</font></html>");
             return false;
         }
         return true;

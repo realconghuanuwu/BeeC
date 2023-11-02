@@ -69,9 +69,9 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
         try {
             nvDAO.insert(nv);
             fillDataToTable();
-            MsgBox.alert(this, "Thêm mới nhân viên thành công!");
+            MsgBox.alert(null, "Thêm mới nhân viên thành công!");
         } catch (Exception e) {
-            MsgBox.alert(this, "Thêm mới nhân viên thất bại!");
+            MsgBox.alert(null, "Thêm mới nhân viên thất bại!");
             e.printStackTrace();
         }
         
@@ -82,9 +82,9 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
         try {
             nvDAO.update(nv);
             fillDataToTable();
-            MsgBox.alert(this, "Cập nhật nhân viên thành công!");
+            MsgBox.alert(null, "Cập nhật nhân viên thành công!");
         } catch (Exception e) {
-            MsgBox.alert(this, "Cập nhật nhân viên thất bại!");
+            MsgBox.alert(null, "Cập nhật nhân viên thất bại!");
             e.printStackTrace();
         }
         
@@ -96,9 +96,9 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
             nvDAO.delete(ma);
             fillDataToTable();
             clearForm();
-            MsgBox.alert(this, "Xóa nhân viên thành công!");
+            MsgBox.alert(null, "Xóa nhân viên thành công!");
         } catch (Exception e) {
-            MsgBox.alert(this, "Xóa nhân viên thất bại!");
+            MsgBox.alert(null, "Xóa nhân viên thất bại!");
             e.printStackTrace();
         }
     }
@@ -258,7 +258,7 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
             } 
             
         } catch (Exception e) {
-            MsgBox.alert(this, "Lỗi truy vấn dữ liệu");
+            MsgBox.alert(null, "Lỗi truy vấn dữ liệu");
             e.printStackTrace();
         }
     }
@@ -1713,7 +1713,7 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
         }
 
         if (strb.length() > 0) {
-            MsgBox.alert(this, "<html><font color='red'>" + strb + "</font></html>");
+            MsgBox.alert(null, "<html><font color='red'>" + strb + "</font></html>");
             return false;
         }
         return true;
@@ -1723,7 +1723,7 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
         if(isValidForm()) {
             NhanVien nv = nvDAO.selectByID(txtMaNhanVien.getText());
             if(nv != null) {
-                MsgBox.alert(this, "<html><font color='red'>Mã nhân viên đã tồn tại!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Mã nhân viên đã tồn tại!</font></html>");
                 return;
             } 
             insert();
@@ -1733,9 +1733,9 @@ public class NhanVienvaThongKe extends javax.swing.JInternalFrame {
 
     
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
-        if(MsgBox.confirm(this, "Xóa nhân viên này?\nĐiều này sẽ dẫn đến xóa các dữ liệu liên quan!")) {
+        if(MsgBox.confirm(null, "Xóa nhân viên này?\nĐiều này sẽ dẫn đến xóa các dữ liệu liên quan!")) {
             if(Auth.user.getMaNhanVien().equals(txtMaNhanVien.getText())) {
-                MsgBox.alert(this, "<html><font color='red'>Không thể xóa chính bản thân!</font></html>");
+                MsgBox.alert(null, "<html><font color='red'>Không thể xóa chính bản thân!</font></html>");
                 return;
             }
             delete();
