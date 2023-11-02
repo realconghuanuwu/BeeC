@@ -105,7 +105,6 @@ gui\QuanLyHD$10.class
 gui\QuanLyKhoHangvaSanPham$57.class
 gui\ForgotPasswordJDialog$6.class
 gui\QuanLyKhoHangvaSanPham$62.class
-gui\NewJPanel.class
 gui\QuanLyHD$8.class
 dao\DanhMucDAO.class
 gui\QuanLyHD$38.class

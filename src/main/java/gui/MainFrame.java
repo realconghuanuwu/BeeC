@@ -47,7 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private void hover(JPanel panel) {
-        JPanel[] pn = {btnHoaDon,btnKhachHang,btnKhoHang,btnNhanVien,btnSanPham,btnThanhToan,btnThongKe,btnDangXuat,btnHuongDan};
+        JPanel[] pn = {btnHoaDon,btnKhachHang,btnKhoHang,btnNhanVien,btnSanPham,btnThanhToan,btnThongKe,btnDangXuat,btnHuongDan, btnChat};
         for (JPanel jPanel : pn) {
             jPanel.setBackground(new Color(19,144,234));
         }
@@ -82,7 +82,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnHuongDan = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        btnThongKe1 = new javax.swing.JPanel();
+        btnChat = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         lblTenNhanVien = new javax.swing.JLabel();
@@ -387,11 +387,11 @@ public class MainFrame extends javax.swing.JFrame {
         jSeparator4.setBackground(new java.awt.Color(0, 102, 204));
         jSeparator4.setForeground(new java.awt.Color(0, 102, 204));
 
-        btnThongKe1.setBackground(new java.awt.Color(19, 144, 234));
-        btnThongKe1.setForeground(new java.awt.Color(204, 204, 204));
-        btnThongKe1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnChat.setBackground(new java.awt.Color(19, 144, 234));
+        btnChat.setForeground(new java.awt.Color(204, 204, 204));
+        btnChat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnThongKe1MouseClicked(evt);
+                btnChatMouseClicked(evt);
             }
         });
 
@@ -404,17 +404,17 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel13.setInheritsPopupMenu(false);
 
-        javax.swing.GroupLayout btnThongKe1Layout = new javax.swing.GroupLayout(btnThongKe1);
-        btnThongKe1.setLayout(btnThongKe1Layout);
-        btnThongKe1Layout.setHorizontalGroup(
-            btnThongKe1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnThongKe1Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnChatLayout = new javax.swing.GroupLayout(btnChat);
+        btnChat.setLayout(btnChatLayout);
+        btnChatLayout.setHorizontalGroup(
+            btnChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnChatLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jLabel13)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        btnThongKe1Layout.setVerticalGroup(
-            btnThongKe1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btnChatLayout.setVerticalGroup(
+            btnChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel13)
         );
 
@@ -439,7 +439,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jSeparator3)
                     .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
-            .addComponent(btnThongKe1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menuLayout.setVerticalGroup(
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -467,7 +467,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnThongKe1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnChat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnHuongDan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -749,9 +749,9 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnHuongDanMouseClicked
 
-    private void btnThongKe1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnThongKe1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnThongKe1MouseClicked
+    private void btnChatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnChatMouseClicked
+        hover(btnChat);
+    }//GEN-LAST:event_btnChatMouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -786,6 +786,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnChat;
     private javax.swing.JPanel btnDangXuat;
     private javax.swing.JPanel btnHoaDon;
     private javax.swing.JLabel btnHome;
@@ -796,7 +797,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel btnSanPham;
     private javax.swing.JPanel btnThanhToan;
     private javax.swing.JPanel btnThongKe;
-    private javax.swing.JPanel btnThongKe1;
     private javax.swing.JDesktopPane jDesktopPane;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
