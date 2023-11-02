@@ -14,3 +14,4 @@ LIST TO DO
 - thêm hình ảnh, giá tiền, tên sp vào bảng chọn sản phẩm trong mục thanh toán  
 - cải tiến chức năng chatroom (huấn)
 - thêm nút vào trong jtable
+- Quét mã barcode sản phẩm - webcam (huấn)
